@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my_wrapper">
+       
+        <h1>Calcola il prezzo del tuo biglietto</h1>
+        <div class="biglietto">
+            <div class="row">
+                <div class="col">
+                    <h4>Nome e Cognome</h4>
+                <input type="text" id="my_name" placeholder="Inserisci il tuo nome">
+                <span id="errore">Il campo del nome non deve essere vuoto</span>
+                </div>
+
+                <div class="col">
+                    <h4>Km da percorrere</h4>
+                <input type="number" id="my_km" placeholder="Inserisci i km (tra 1 e 100)" min="1" max="100">
+                <span id="errore2">Il campo dei Km da percorrere non deve essere vuoto</span>
+                <span id="errore3">Hai inserito un valore non valido i Km devono essere compresi tra 1 e 100</span>
+                </div>
+
+                <div class="col">
+                    <h4>Fascia d'età</h4>
+                <select id="myList">
+                    <option></option>
+                    <option>Minorenne</option>
+                    <option>Maggiorenne</option>
+                    <option>Over 65</option>
+                </select>
+                <span id="errore4">Devi selezionare l'età</span>
+                </div>
+            </div>
+            <button class="my_button" onclick="myFunction()">Genera</button>
+            <button class="my_button" onclick="denyFunction()">Annulla</button>
+        </div>
+
+        <h1>Il tuo biglietto</h1>
+        <div id="ticket" class="biglietto">
+            <div class="my_wrapper_2">
+                <h2>Dettaglio Passeggeri</h2>
+                <table>
+                    <tr>
+                        <td class="grey">
+                            <span><strong>NOME PASSEGGERO</strong></span>
+                        </td>
+                        <td>
+                            <Span><strong>Offerta</strong></Span>
+                        </td>
+                        <td>
+                            <span><strong>Carrozza</strong></span>
+                        </td>
+                        <td>
+                            <span><strong>Codice CP</strong></span>
+                        </td>
+                        <td>
+                            <span><strong>Costo Biglietto</strong></span>
+                        </td>
+                    </tr>
+                    <tr class="margin">
+                        <td class="grey">
+                            <span id="nome""></span>
+                        </td>
+                        <td>
+                            <span id="offerta"></span>
+                        </td>
+                        <td>
+                            <span id="carrozza"></span>
+                        </td>
+                        <td>
+                            <span id="codice"></span>
+                        </td>
+                        <td>
+                            <span id="costo"></span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="space"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
